@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce Website Design</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <a href="index.html" class="logo">Shop</a>
+            <a href="index.html" class="logo">
+                <div class="logo-icon">BM</div>
+                <span class="logo-text">BuildMart</span>
+            </a>
             <nav>
                 <a href="products.html">Products</a>
                 <a href="categories.html">Categories</a>
@@ -17,9 +22,10 @@
                 <a href="about.html">About</a>
             </nav>
             <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 <input type="text" placeholder="Search products...">
             </div>
-            <a href="cart.html">🛒</a>
+            <a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
     </header>
 </body>
