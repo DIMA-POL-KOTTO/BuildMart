@@ -37,7 +37,7 @@
                 </div>
                 <div class="products-controls">
                     <div class="filters">
-                        <button class="filter-btn">
+                        <button class="filter-btn" id="toggleFilter">
                             <i class="fa-solid fa-sliders"></i>
                             Show Filters
                         </button>
@@ -52,6 +52,52 @@
                             
                         </select>
                     </div>
+                </div>
+                <div id="panelFilters" class="filters-panel">
+                    <div class="filter-box">
+                        <div class="filter-row">
+                            <div class="filter-group">
+                                <h3>Minimum Rating</h3>
+                                <div class="rating-options-row">
+                                    <label class="rating-option">
+                                        <input type="checkbox" value="5">
+                                        <span>5+ Stars</span>
+                                    </label>
+                                    <label class="rating-option">
+                                        <input type="checkbox" value="4">
+                                        <span>4+ Stars</span>
+                                    </label>
+                                    <label class="rating-option">
+                                        <input type="checkbox" value="3">
+                                        <span>3+ Stars</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <div class="slider-group">
+                                    <h3>Price Range</h3>
+                                    <div class="slider-container">
+                                        <div class="slider-track"></div>
+                                        <div class="slider-range" id="sliderRange"></div>
+                                        <input type="range" min="0" max="400" value="0" step="10" id="minPrice">
+                                        <input type="range" min="0" max="400" value="400" step="10" id="maxPrice">
+                                        <div class="price-labels">
+                                            <span id="minValue">$0</span>
+                                            <span id="maxValue">$400</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="filter-action">
+                                <button class="clear-filters-btn">
+                                    Clear All Filters
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="products-grid">
                     <!--КАРТОЧКИ-->
@@ -244,6 +290,6 @@
 
         </div>
     </footer>
-
+<script src="js/filter.js"></script>
 </body>
 </html>
