@@ -176,6 +176,12 @@ h1 {
     cursor: pointer;
 }
 
+.sort select:focus {
+    border: 2px solid #e75f10;
+}
+
+
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -479,11 +485,11 @@ footer .title {
 
 .slider-container input {
     position: absolute;
-    width: 99.7%;
+    width: 99.5%;
     pointer-events: none;
     appearance: none;
     background: none;
-    top: -2.5px;
+    top: -2.62px;
     left: -1px
 }
 
@@ -491,10 +497,17 @@ footer .title {
     pointer-events: auto;
     margin-top: 1px;
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     background: white;
     border-radius: 50%;
+    border: 1px solid black;
+}
+
+.slider-container input::-webkit-slider-thumb:hover {
+    
+    background: white;
+    box-shadow: 0 0 0 6px #23232322;
 }
 
 
