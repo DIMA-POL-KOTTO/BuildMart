@@ -42,6 +42,7 @@
                             Show Filters
                         </button>
                         <span class="products-count">Showing 6 products</span>
+                        
                     </div>
                     <div class="sort">
                         <p>Sort by:</p>
@@ -79,7 +80,7 @@
                                     <div class="slider-container">
                                         <div class="slider-track"></div>
                                         <div class="slider-range" id="sliderRange"></div>
-                                        <input type="range" min="0" max="400" value="0" step="10" id="minPrice">
+                                        <input type="range" min="0" max="390" value="0" step="10" id="minPrice">
                                         <input type="range" min="0" max="400" value="400" step="10" id="maxPrice">
                                         <div class="price-labels">
                                             <span id="minValue">$0</span>
@@ -99,9 +100,13 @@
                     </div>
                     
                 </div>
+                <div id="noProductsMessage" class="no-products" >
+                    <p>No products match ypur filters.</p>
+                    <button id="clearBtn2" class="clear-filters-btn">Clear filters</button>
+                </div>
                 <div class="products-grid">
                     <!--КАРТОЧКИ-->
-                    <div class="product-card">
+                    <div class="product-card" data-rating="3.5" data-price="45.99">
                         <div class="product-image">
                             <a href="#"><img src="img/product_1.jfif" alt="product"></a>
                         </div>
@@ -121,7 +126,7 @@
                         </div>
                     </div>
                     <!-------------->
-                    <div class="product-card">
+                    <div class="product-card" data-rating="4.5" data-price="52.99">
                         <div class="product-image">
                             <a href="#"><img src="img/product_2.jfif" alt="product"></a>
                         </div>
@@ -141,7 +146,7 @@
                         </div>
                     </div>
                     <!-------------->
-                    <div class="product-card">
+                    <div class="product-card" data-rating="5.0" data-price="24.99">
                         <div class="product-image">
                             <a href="#"><img src="img/product_3.jfif" alt="product"></a>
                         </div>
@@ -161,7 +166,7 @@
                         </div>
                     </div>
                     <!-------------->
-                    <div class="product-card">
+                    <div class="product-card" data-rating="4.5" data-price="89.99">
                         <div class="product-image">
                             <a href="#"><img src="img/product_4.jfif" alt="product"></a>
                         </div>
@@ -181,7 +186,7 @@
                         </div>
                     </div>
                     <!-------------->
-                    <div class="product-card">
+                    <div class="product-card" data-rating="4.0" data-price="0.89">
                         <div class="product-image">
                             <a href="#"><img src="img/product_5.jfif" alt="product"></a>
                         </div>
@@ -201,7 +206,7 @@
                         </div>
                     </div>
                     <!-------------->
-                    <div class="product-card">
+                    <div class="product-card" data-rating="5.0" data-price="349.99">
                         <div class="product-image">
                             <a href="#"><img src="img/product_6.jfif" alt="product"></a>
                         </div>
@@ -290,6 +295,10 @@
 
         </div>
     </footer>
-<script src="js/filter.js"></script>
+<script src="js/filter/using_filter.js"></script>
+<script src="js/filter/show_filters.js"></script>
+<script src="js/filter/filter_checkbox.js"></script>
+<script src="js/filter/filter_slider.js"></script>
+<script src="js/filter/filter_clear.js"></script>
 </body>
 </html>
