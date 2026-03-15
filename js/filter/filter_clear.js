@@ -1,5 +1,4 @@
 const clearBtn = document.getElementById("clearBtn")
-const clearBtn2 = document.getElementById("clearBtn2")
 
 function clearFilters(){
     ratingCheckboxes.forEach(checkbox => {
@@ -14,6 +13,5 @@ function clearFilters(){
 };
 
 clearBtn.addEventListener('click', clearFilters)
-clearBtn2.addEventListener('click', clearFilters)
 
 //разобраться со второй кнопкой

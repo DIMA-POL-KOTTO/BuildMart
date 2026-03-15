@@ -30,6 +30,8 @@ function filterProducts(){
     productsCount.textContent = 'Showing ' + count + ' products';
     if (count === 0){
         noProductsMessage.style.display = 'block';
+        const clearBtn2 = document.getElementById("clearBtn2")
+        clearBtn2.addEventListener('click', clearFilters)
     }
     else {
         noProductsMessage.style.display = 'none';
