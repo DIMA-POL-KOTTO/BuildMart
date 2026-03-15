@@ -19,5 +19,6 @@ buttons.forEach(button => {
             cart.push(product);
         }
         localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Added!");
     });
 });
