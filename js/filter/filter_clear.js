@@ -13,5 +13,3 @@ function clearFilters(){
 };
 
 clearBtn.addEventListener('click', clearFilters)
-
-//разобраться со второй кнопкой
