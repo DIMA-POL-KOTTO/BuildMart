@@ -7,7 +7,7 @@ buttons.forEach(button => {
             name: card.dataset.name,
             category: card.dataset.category,
             price: parseFloat(card.dataset.price),
-            image: card.dataset.image,
+            img: card.dataset.img,
             count: 1
         };
         let cart = JSON.parse(localStorage.getItem("cart")) || [];

@@ -30,15 +30,59 @@
         </div>
     </header>
     <main class="cart-page">
-        <div class="cart-empty">
-            <h1>Your Cart is Empty</h1>
-            <p>Start shopping to add items to your cart</p>
-            <a href="index.html" class="browse-products-btn">
-                Browse Products <span><i class="fa-solid fa-arrow-right"></i></span>
-            </a>
-        </div>
-        <div class="cart-content" style="display: none;">
-            <h1>Here will be cart products</h1>
+        <div class="container">
+
+        
+            <div class="cart-empty">
+                <h1>Your Cart is Empty</h1>
+                <p>Start shopping to add items to your cart</p>
+                <a href="index.html" class="browse-products-btn">
+                    Browse Products <span><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+            <div class="cart-content" style="display: none;">
+                <div class="cart-container">
+                    <h1>Shopping Cart</h1>
+                    <div class="cart-layout">
+                        <div class="cart-left">
+                            <div class="cart-products">
+                                <div class="cart-header">
+                                    <p>Product</p>
+                                    <p>Price</p>
+                                    <p>Quantity</p>
+                                    <p>Total</p>
+                                </div>
+                                <div id="cartItems"></div>
+                            </div>
+                            <div class="promo-box">
+                                <h3>Have a promo code?</h3>
+                                <div class="promo-form">
+                                    <input type="text" placeholder="Enter promo code">
+                                    <button>Apply</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+            
+                        <div class="cart-summary">
+                            <h2>Order Summary</h2>
+                            <div class="summary-line">
+                                <p>Subtotal</p>
+                                <p id="subtotal">$0</p>
+                            </div>
+                            <div class="summary-line">
+                                <p>Tax (8%)</p>
+                                <p id="tax">$0</p>
+                            </div>
+                            <div class="summary-total">
+                                <h2>Total</h2>
+                                <h2 id="total">$0</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -106,6 +150,8 @@
 
         </div>
     </footer>
+    <script src="js/cart/change_quantity.js"></script>
     <script src="js/cart/show_cart_products.js"></script>
+    <script src="js/cart/delete_product.js"></script>
 </body>
 </html>
