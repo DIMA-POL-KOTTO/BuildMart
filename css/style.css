@@ -5,7 +5,10 @@ body {
 
 header {
     position: sticky;
+    top:0;
     border-bottom: 1px solid #cccccc9e;
+    background-color: white;
+    z-index: 100;
 }
 
 h3 {

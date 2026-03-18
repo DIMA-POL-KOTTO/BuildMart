@@ -12,7 +12,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 180px;
+    
 }
 
 .cart-empty {
@@ -177,7 +177,9 @@ main {
     border: 1px solid #cccccc9e;
     border-radius: 9px;
     padding: 25px;
-    
+    position: sticky;
+    top: 80px;
+    background-color: white;
 }
 
 .cart-summary h2 {
@@ -247,6 +249,84 @@ main {
     background-color: #be470c;
 }
 
+.buttons-total {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.check-btn {
+    appearance: none;
+    border: none;
+    background-color: #e75f10;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.check-btn:hover{
+    transition: 0.2s;
+    background-color: #be470c;
+}
+
+.cont-btn {
+    border: 1px solid #cccccc9e;
+    background-color: white;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.cont-btn:hover {
+    transition: 0.2s ease;
+    background-color: #6b6a6a0b;
+    cursor: pointer;
+}
+
+.shipping-info {
+    border: 1px solid #cccccc9e;
+    margin: 25px 0 30px 0;
+    border-radius: 9px;
+    padding: 30px;
+}
+
+.shipping-info h3 {
+    margin: -5px 0 10px -5px;
+}
+
+.shipping-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.shipping-item {
+    display: flex;
+    
+}
+
+.shipping-item .icon {
+    color: #e75f10;
+    margin-right: 10px;
+}
+
+.shipping-item .title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.shipping-item .text {
+    margin: 0;
+    font-size: 14px;
+    color: #6b6a6a;
+    padding-bottom: 10px;
+}
+
+
+ 
 /*#color: #e75f10;
 color: #9f420b;
 be470c
