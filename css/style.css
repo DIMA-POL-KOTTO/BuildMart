@@ -557,3 +557,78 @@ footer .title {
     background-color: #e75f1018;
     color: #9f420b;
 }
+
+.toast-container {
+    position: fixed;
+    top: 15px;
+    right: 60px;
+    z-index: 200;
+    width: 270px;
+    height: 100px;
+}
+
+.toast-container p {
+    margin: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.toast {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #cccccc9e;
+    background-color: white;
+    border-radius: 9px;
+    transition: 0.4s ease;
+    opacity: 0;
+    transform: translateY(-50px);
+    box-shadow: 0 4px 12px #00000033;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast.hide {
+    opacity: 0;
+}
+
+.toast[data-position="0"] {
+    z-index:3;
+}
+
+.toast[data-position="1"] {
+    z-index:3;
+    transform: translateY(10px) scale(0.95);
+}
+
+.toast[data-position="2"] {
+    z-index:3;
+    transform: translateY(20px) scale(0.9);
+}
+
+.toast-container:hover .toast[data-position="0"] {
+    top:-5px;
+}
+
+.toast-container:hover .toast[data-position="1"] {
+    top: 55px;
+    transform: scale(1);
+}
+
+.toast-container:hover .toast[data-position="2"] {
+    top:115px;
+    transform: scale(1);
+}
+
+
+.toast i {
+    font-size: 16px;
+    padding-right: 7px;
+}

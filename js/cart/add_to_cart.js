@@ -1,10 +1,14 @@
 const buttons = document.querySelectorAll(".add-to-cart")
+let toastQueue = [];
+const MAX_TOASTS = 3;
+
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         const card = button.closest(".product-card");
+        const productName = card.dataset.name;
         const product = {
             id: card.dataset.id,
-            name: card.dataset.name,
+            name: productName,
             category: card.dataset.category,
             price: parseFloat(card.dataset.price),
             img: card.dataset.img,
@@ -20,7 +24,7 @@ buttons.forEach(button => {
         }
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCartCounter();
-        alert("Added!");
+        showToast(`Added ${productName} to cart`);
     });
     
 });
@@ -41,7 +45,48 @@ function updateCartCounter() {
 }
 
 function showToast(mes){
-    
+    const container = document.querySelector(".toast-container");
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = `
+        <p><i class="fa-solid fa-circle-check"></i> ${mes}</p>
+    `;
+    container.appendChild(toast);
+    toastQueue.unshift(toast);
+    if(toastQueue.length > MAX_TOASTS){
+        const oldToast = toastQueue.pop();
+        removeToast(oldToast);
+    }
+    updatePos();
+    setTimeout(()=>{
+        toast.classList.add("show");
+    }, 10);
+    setTimeout(() => {
+        removeToast(toast);
+    }, 3000);
+}
+
+function removeToast(toast) {
+    if(!toast || !toast.parentNode){
+        return;
+    }
+    toast.classList.add('hide');
+    toast.classList.remove('show');
+    setTimeout(()=>{
+        if (toast.parentNode) {
+            toast.parentNode.removeChild(toast);
+        }
+        toastQueue = toastQueue.filter(item => item!== toast);
+        updatePos();
+    }, 400);
+}
+
+function updatePos(){
+    toastQueue.forEach((toast, index) => {
+        if(index < MAX_TOASTS) {
+            toast.setAttribute('data-position', index);
+        }
+    })
 
 }
 
