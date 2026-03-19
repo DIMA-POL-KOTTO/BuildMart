@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container header-content">
@@ -26,7 +27,8 @@
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 <input type="text" placeholder="Search products...">
             </div>
-            <a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            
+            <a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping"></i><span class="count-products">5</span></a>
         </div>
     </header>
     <main class="cart-page">
@@ -177,8 +179,10 @@
 
         </div>
     </footer>
+    
     <script src="js/cart/change_quantity.js"></script>
     <script src="js/cart/show_cart_products.js"></script>
     <script src="js/cart/delete_product.js"></script>
+    
 </body>
 </html>

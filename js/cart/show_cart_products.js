@@ -2,9 +2,11 @@ const emptyCart = document.querySelector(".cart-empty")
 const cartContent = document.querySelector(".cart-content")
 const cartItems = document.getElementById("cartItems")
 let cart = JSON.parse(localStorage.getItem("cart")) || []
+const cartCount = document.querySelector(".count-products") //
 if (cart.length === 0){
     emptyCart.style.display = "block";
     cartContent.style.display = "none";
+    cartCount.style.display = "none";//
 }
 else {
     emptyCart.style.display = "none";
@@ -14,9 +16,15 @@ else {
 
 function showCartProducts(){
     let cart = JSON.parse(localStorage.getItem("cart")) || []
+    const totalCount = cart.reduce((sum, item) => sum + item.count, 0);//
+    if (totalCount > 0){//
+        cartCount.textContent = totalCount;//
+    }//
+
     if (cart.length === 0){
         emptyCart.style.display = "block";
         cartContent.style.display = "none";
+        cartCount.style.display = "none"; //
         return;
     }
     cartItems.innerHTML = "";
@@ -46,6 +54,8 @@ function showCartProducts(){
             </div>
         </div>
         `;
+        
+        
     });
     updateSummary(subtotalCost)
 }

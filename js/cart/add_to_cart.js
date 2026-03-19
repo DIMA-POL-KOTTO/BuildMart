@@ -19,6 +19,30 @@ buttons.forEach(button => {
             cart.push(product);
         }
         localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCounter();
         alert("Added!");
     });
+    
 });
+
+function updateCartCounter() {
+    const cartCount = document.querySelector(".count-products");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalCount = cart.reduce((sum, item) => sum + item.count, 0);
+    if (cartCount) {
+        if (totalCount > 0) {
+            cartCount.textContent = totalCount;
+            cartCount.style.display = "block";
+        }
+        else {
+            cartCount.style.display = "none";
+        }
+    }
+}
+
+function showToast(mes){
+    
+
+}
+
+document.addEventListener('DOMContentLoaded', updateCartCounter);
