@@ -291,6 +291,9 @@ main {
     padding: 14px;
     font-size: 16px;
     border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
 }
 
 .cont-btn:hover {
