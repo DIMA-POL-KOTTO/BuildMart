@@ -59,9 +59,12 @@
                             <div class="promo-box">
                                 <h3>Have a promo code?</h3>
                                 <div class="promo-form">
-                                    <input type="text" placeholder="Enter promo code">
-                                    <button>Apply</button>
+                                    <input type="text" placeholder="Enter promo code" id="promoInput">
+                                    <button id="promoBtn">Apply</button>
+                                    
                                 </div>
+                                <p class="promoHint">Try code: BUILD10 for 10% off</p>
+                                
                             </div>
                             
                         </div>
@@ -75,6 +78,10 @@
                                 <div class="summary-line">
                                     <p>Tax (8%)</p>
                                     <p id="tax">$0</p>
+                                </div>
+                                <div class="discount-line">
+                                    <p style="color: green;">Discount (10%)</p>
+                                    <p id="discount" style="color: green;">0</p>
                                 </div>
                                 <div class="summary-total">
                                     <h2>Total</h2>
@@ -183,6 +190,6 @@
     <script src="js/cart/change_quantity.js"></script>
     <script src="js/cart/show_cart_products.js"></script>
     <script src="js/cart/delete_product.js"></script>
-    
+    <script src="js/promo_code/promo_code.js"></script>
 </body>
 </html>

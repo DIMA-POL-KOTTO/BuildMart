@@ -3,6 +3,7 @@ const cartContent = document.querySelector(".cart-content")
 const cartItems = document.getElementById("cartItems")
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 const cartCount = document.querySelector(".count-products") //
+let discountCoef = 0;
 if (cart.length === 0){
     emptyCart.style.display = "block";
     cartContent.style.display = "none";
@@ -60,10 +61,25 @@ function showCartProducts(){
     updateSummary(subtotalCost)
 }
 
+
+
 function updateSummary(subtotal) {
     const tax = subtotal * 0.08;
-    const total = subtotal + tax;
+    const total = subtotal + tax - discountCoef;
+    
     document.getElementById("subtotal").textContent = "$" + subtotal.toFixed(2);
     document.getElementById("tax").textContent = "$" + tax.toFixed(2);
     document.getElementById("total").textContent = "$" + total.toFixed(2);
+    document.getElementById("discount").textContent = "-$" + discountCoef.toFixed(2);
+
+    const discountLine = document.querySelector(".discount-line");
+    if (discountLine) {
+        discountLine.style.display = discountCoef > 0 ? "flex" : "none";
+    }
+}
+
+window.applyPromo = function(coef) {
+    discountCoef = coef;
+    const subtotal = parseFloat(document.getElementById("subtotal").textContent.replace(/[^0-9.]/g, ''));
+    updateSummary(subtotal);
 }
