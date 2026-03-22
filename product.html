@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website Design</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_page_product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">BM</div>
+                <span class="logo-text">BuildMart</span>
+            </a>
+            <nav>
+                <a href="index.html">Products</a>
+                <a href="categories.html">Categories</a>
+                <a href="deals.html">Deals</a>
+                <a href="about.html">About</a>
+            </nav>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search products...">
+            </div>
+            
+            <a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping"></i><span class="count-products"></span></a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="index.html">Products</a>
+                <span style="color: #6b6a6a;">/</span>
+                <span id="productName"></span>
+            </nav>
+            <div class="product">
+                <div class="gallery">
+                    <div class="main-image">
+                        <img id="productImg">
+                        <button class="nav prev"><i class="fa-solid fa-angle-left"></i></button>
+                        <button class="nav next"><i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                    <div class="other-images">
+                        <img id="productImg1" class="im active">
+                        <img id="productImg2" class="im">
+                        <img id="productImg3" class="im">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 id="productName1"></h1>
+                    <div class="product-price">
+                        <h1 id="productPrice"></h1><span>/unit</span>
+                    </div>
+                    <div class="quantity">
+                        <button>-</button>
+                        <input type="number" value="1" min="1">
+                        <button>+</button>
+                    </div>
+                    <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    <button class="buy-now-btn">Buy Now</button>
+                    <h2>Description</h2>
+                    <p id="productDescription"></p>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>BuildMart</h3>
+                    <p>Your trusted source for premium building materials and construction supplies since 1995.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            
+            <div class="links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html">Products</a></li>
+                    <li><a href="#">Delivery Info</a></li>
+                    <li><a href="#">Returns Policy</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Tracking</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe for updates and exclusive deals.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button>
+                        <i class="fa-solid fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+            </div>
+            <div class="contact">
+                <div>
+                    <p class="title">Phone</p>
+                    <p>1-800-BUILD-MART</p>
+                </div>
+                <div>
+                    <p class="title">Email</p>
+                    <p>support@buildmart.com</p>
+                </div>
+                <div>
+                    <p class="title">Address</p>
+                    <p>123 Construction Ave, Builder City</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 BuildMart. All rights reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+<script src="js/cart/add_to_cart.js"></script>
+<script src="js/data/products_data.js"></script>
+<script src="js/cart/change_quantity.js"></script>
+</body>
