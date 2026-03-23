@@ -79,3 +79,119 @@ main {
 .im.active {
     border-color: #e75f10;
 }
+
+.product-info {
+    padding: 0;
+}
+
+.product-info h1 {
+    margin: 0;
+}
+
+.product-price {
+    display: flex;
+    align-items:end;
+    margin: 10px 0;
+}
+
+.product-price span {
+    margin: 0 0 7px 10px;
+    color: #6b6a6a;
+}
+
+.features {
+    display: flex;
+    gap: 50px;
+    border-bottom: 1px solid #cccccc6e;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.feature {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.feature span {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #e75f10;
+}
+
+.feature .title {
+    font-weight: 600;
+    margin: 0;
+}
+
+.feature .text {
+    font-size: 12px;
+    margin: 0;
+    color: #6b6a6a;
+}
+
+.quan-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.quan-box button {
+    background-color: white;
+    border: 1px solid #cccccc;
+    height: 40px;
+    width: 40px;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    transition: 0.2s;
+}
+
+.quan-box button:hover {
+    background-color: #cccccc25;
+}
+
+.quan-box input {
+    border: 1px solid #cccccc;
+    border-radius: 9px;
+    text-align: center;
+    font-size: 16px;
+    width: 15%;
+}
+
+.quan-box input:focus{
+    outline: none;
+    border: 2px solid #e75f10;
+}
+
+.buy-now-btn {
+    margin-top: 15px;
+    height: 55px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #e75f10;
+    background-color: white;
+    border: 2px solid #e75f10;
+    width: 100%;
+    border-radius: 9px;
+    transition: 0.2s;
+}
+
+.buy-now-btn:hover {
+    background-color: #e75f1018
+}
+
+.description {
+    margin-top: 30px;
+}
+
+.description h2 {
+    font-size: 20px;
+}
+
+.description p {
+    color: #6b6a6a;
+    line-height: 25px;
+}

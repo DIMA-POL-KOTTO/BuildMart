@@ -4,27 +4,51 @@ const MAX_TOASTS = 3;
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
+        let quantity = 1;
+        const quanInput = document.getElementById("quan");
+        if (quanInput) {
+            quantity = +quanInput.value;
+        }
         const card = button.closest(".product-card");
-        const productName = card.dataset.name;
-        const product = {
-            id: card.dataset.id,
-            name: productName,
-            category: card.dataset.category,
-            price: parseFloat(card.dataset.price),
-            img: card.dataset.img,
-            count: 1
-        };
+        let product;
+        if (!card) {
+            const productId = new URLSearchParams(window.location.search).get("id");
+            product = {
+                id: productId,
+                name: document.getElementById("productName").textContent,
+                category: document.getElementById("productCategory").textContent,
+                price: parseFloat(document.getElementById("productPrice").textContent.replace("$", '')),
+                img: document.getElementById("productImg").src,
+                count: quantity
+            }
+        }
+        else {
+            product = {
+                id: card.dataset.id,
+                name: card.dataset.productName,
+                category: card.dataset.category,
+                price: parseFloat(card.dataset.price),
+                img: card.dataset.img,
+                count: 1
+            };
+        }
+        
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         const existing = cart.find(item => item.id === product.id);
         if (existing) {
-            existing.count++;
+            existing.count += quantity;
         }
         else {
             cart.push(product);
         }
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCartCounter();
-        showToast(`Added ${productName} to cart`);
+        if (!card) {
+            showToast(`Added ${quantity} ${productName.textContent} to cart`);
+        }
+        else {
+            showToast(`Added ${card.dataset.productName} to cart`);
+        }
     });
     
 });

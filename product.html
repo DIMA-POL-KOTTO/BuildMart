@@ -31,11 +31,15 @@
         </div>
     </header>
     <main>
+        <div class="toast-container">
+            
+        </div>
         <div class="container">
             <nav class="breadcrumbs">
                 <a href="index.html">Products</a>
                 <span style="color: #6b6a6a;">/</span>
                 <span id="productName"></span>
+                <span id="productCategory" style="display: none;"></span>
             </nav>
             <div class="product">
                 <div class="gallery">
@@ -52,18 +56,55 @@
                 </div>
                 <div class="product-info">
                     <h1 id="productName1"></h1>
+                    <div class="rating" style="font-size: 22px;">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <i class="fa-regular fa-star" style="color: #ccc;"></i>
+                        <span>(3.5)</span>
+                    </div>
                     <div class="product-price">
                         <h1 id="productPrice"></h1><span>/unit</span>
                     </div>
-                    <div class="quantity">
-                        <button>-</button>
-                        <input type="number" value="1" min="1">
-                        <button>+</button>
+                    <div class="features">
+                        <div class="feature">
+                            <span><i class="fa-solid fa-box"></i></span>
+                            <div>
+                                <p class="title">Quality Assured</p>
+                                <p class="text">Premium grade material</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span><i class="fa-solid fa-truck"></i></span>
+                            <div>
+                                <p class="title">Fast Delivery</p>
+                                <p class="text">2-5 business days</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span><i class="fa-solid fa-shield"></i></span>
+                            <div>
+                                <p class="title">Warranty</p>
+                                <p class="text">30-day guarantee</p>
+                            </div>
+                        </div>
                     </div>
-                    <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    <div class="quantity">
+                        <p style="font-weight: 600; font-size: 14px;">Quantity</p>
+                        <div class="quan-box">
+                            <button id="minus">-</button>
+                            <input id="quan" type="number" value="1" min="1">
+                            <button id="plus">+</button>
+                        </div>
+                        
+                    </div>
+                    <button class="add-to-cart" style="height: 55px; font-size: 16px;"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
                     <button class="buy-now-btn">Buy Now</button>
-                    <h2>Description</h2>
-                    <p id="productDescription"></p>
+                    <div class="description">
+                        <h2>Description</h2>
+                        <p id="productDescription"></p>
+                    </div>
                 </div>
                 
             </div>
@@ -136,6 +177,6 @@
     </footer>
 <script src="js/cart/add_to_cart.js"></script>
 <script src="js/product/products_data.js"></script>
-<script src="js/cart/change_quantity.js"></script>
+<script src="js/product/quantity_UI.js"></script>
 <script src="js/product/switch_photo.js"></script>
 </body>
