@@ -5,7 +5,7 @@ body {
 
 header {
     position: sticky;
-    top:0;
+    top: 0px;
     border-bottom: 1px solid #cccccc9e;
     background-color: white;
     z-index: 100;
@@ -565,6 +565,7 @@ footer .title {
     z-index: 200;
     width: 270px;
     height: 100px;
+    pointer-events: none;
 }
 
 .toast-container p {
@@ -588,11 +589,13 @@ footer .title {
     opacity: 0;
     transform: translateY(-50px);
     box-shadow: 0 4px 12px #00000033;
+    
 }
 
 .toast.show {
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
 .toast.hide {
