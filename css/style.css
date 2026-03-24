@@ -271,6 +271,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+    margin-bottom: 20px;
 }
 
 .product-card a{
@@ -281,6 +282,7 @@ h1 {
 .product-card {
     border: 1px solid #cccccc;
     border-radius: 9px;
+    overflow: hidden;
 }
 
 .product-card:hover {
@@ -306,7 +308,7 @@ h1 {
 .product-card img {
     width: 100%;
     margin-bottom: -15px;
-    height: 370px;
+    aspect-ratio: 1/1;
     object-fit: cover;
     cursor: pointer;
     transition: 0.25s;
@@ -464,8 +466,14 @@ footer .links a:hover {
     border-top: 0.5px solid #222c41;
 }
 
+.contact p {
+    margin-top: 0;
+}
+
 footer .title {
     color: white;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .copyright {
@@ -502,6 +510,7 @@ footer .title {
 
 .rating-options-row {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -706,6 +715,16 @@ footer .title {
     .logo-text {
         display: none;
     }
+    .products {
+        padding: 7px;
+    }
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px
+    }
     
 }
 
@@ -727,5 +746,37 @@ footer .title {
     }
     .logo {
         margin-right: auto;
+    }
+    .products-header h1 {
+        font-size: 28px;
+    }
+    .products-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .filter-row {
+        flex-direction: column;
+        gap: 10px
+    }
+    .clear-filters-btn {
+        margin-top: 20px;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px
+    }
+    .contact {
+        grid-template-columns: repeat(1,1fr);
+        gap: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .products {
+        padding: 3px;
+    }
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
