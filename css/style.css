@@ -31,6 +31,7 @@ button, option, select, input {
     align-items: center;
     height: 70px;
     gap: 25px;
+    
 }
 
 .logo {
@@ -58,8 +59,11 @@ button, option, select, input {
     color: #000000;
     font-weight: bold;
 }
+
 nav {
     display: flex;
+    flex: 1;
+    justify-content: center;
     gap: 25px;
     font-size: 15px;
     margin: auto;
@@ -76,8 +80,10 @@ nav a:hover {
 }
 
 .search-bar {
-    margin: auto;
+    margin-right: 50px;
     position: relative;
+    flex: 1;
+    
 }
 
 .search-bar input {
@@ -87,8 +93,14 @@ nav a:hover {
     height: 25px;
     font-size: 16px;
     font-family: var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     color: #cccccc;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border: 2px solid #e75f10;
 }
 
 .search-icon {
@@ -100,13 +112,25 @@ nav a:hover {
     
 }
 
+.search-icon-mobile {
+    display: none;
+    font-size: 20px;
+    transition: 0.2s;
+    color: #2323239f;
+}
+
+.search-icon-mobile:hover {
+    color: #e75f10;
+}
+
 .cart {
     font-size: 22px;
     text-decoration: none;
-    color: black;
+    color: #2323239f;
     font-size: 20px;
     transition: 0.2s;
     position: relative;
+    
 }
 
 .cart:hover {
@@ -126,6 +150,48 @@ nav a:hover {
     align-items: center;
     text-align: center;
     border-radius: 50%;
+}
+
+.menu-mobile {
+    display: none;
+    background-color: white;
+    color: #2323239f;
+    border: none;
+    font-size: 20px;
+}
+
+.menu-content-mobile {
+    display: none;
+    border-top: 1px solid #cccccc9e;
+    padding: 20px;
+}
+
+.search-bar.mobile {
+    display: block;
+}
+
+.search-bar.mobile input {
+    width: 100%;
+    max-width: 800px;
+}
+
+.menu-content-mobile.active {
+    display: block;
+}
+
+.menu-content-mobile nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 0;
+}
+
+.menu-content-mobile a {
+    padding: 10px 0;
+}
+
+.menu-content-mobile nav.active {
+    display: flex;
 }
 
 h1 {
@@ -634,4 +700,32 @@ footer .title {
 .toast i {
     font-size: 16px;
     padding-right: 7px;
+}
+
+@media (max-width: 1024px) {
+    .logo-text {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        display: none;
+    }
+    .search-bar.mobile {
+        display: block;
+    }
+    .search-icon-mobile {
+        display: block;
+    }
+    .menu-mobile {
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+    .logo {
+        margin-right: auto;
+    }
 }
