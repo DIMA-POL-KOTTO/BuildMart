@@ -25,7 +25,7 @@ buttons.forEach(button => {
         else {
             product = {
                 id: card.dataset.id,
-                name: card.dataset.productName,
+                name: card.dataset.name,
                 category: card.dataset.category,
                 price: parseFloat(card.dataset.price),
                 img: card.dataset.img,

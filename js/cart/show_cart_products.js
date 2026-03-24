@@ -36,22 +36,30 @@ function showCartProducts(){
         cartItems.innerHTML += `
         <div class="cart-item">
             <div class="cart-product">
-                <img src="${product.img}">
+                <a href="product.html?id=${product.id}"><img src="${product.img}"></a>
                 <div class="cart-product-info">
-                    <h3>${product.name}</h3>
+                    <a href="product.html?id=${product.id}"><h3>${product.name}</h3></a>
                     <p>${product.category}</p>
-                    
+                    <button class="remove-btn-mobile" onclick="deleteProduct('${product.id}')"> 
+                        <i class="fa-regular fa-trash-can"></i> Remove
+                    </button>
                 </div>
             </div>
-            <div class="cart-price">$${product.price}</div>
+            <div class="cart-price-container">
+                <p class="price-mobile">Price:</p>
+                <div class="cart-price">$${product.price}</div>
+            </div>
             <div class="cart-quantity">
                 <button onclick="changeQuantity('${product.id}', -1)"><i class="fa-solid fa-minus"></i></button>
                 <p>${product.count}</p>
                 <button onclick="changeQuantity('${product.id}', +1)"><i class="fa-solid fa-plus"></i></button>
             </div>
-            <div class="cart-total">
-                <p>$${totalCost.toFixed(2)}</p>
-                <button onclick="deleteProduct('${product.id}')"><i class="fa-regular fa-trash-can"></i></button>
+            <div class="total-container">
+                <p class="price-mobile total-mobile">Total:</p>
+                <div class="cart-total">
+                    <p>$${totalCost.toFixed(2)}</p>
+                    <button onclick="deleteProduct('${product.id}')"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
             </div>
         </div>
         `;
