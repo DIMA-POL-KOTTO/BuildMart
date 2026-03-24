@@ -12,6 +12,7 @@ main {
     font-size: 14px;
     margin: 25px 0 20px 0;
     gap: 5px;
+    justify-content: start;
 }
 
 .product {
@@ -269,4 +270,14 @@ main {
 
 .related-container {
     margin: 50px 0;
+}
+
+.product-info h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 1024px) {
+
 }

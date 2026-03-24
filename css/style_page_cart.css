@@ -184,6 +184,7 @@ main {
 }
 
 .remove-btn-mobile {
+    display: none;
     background-color: white;
     border: none;
     color: red;
@@ -395,6 +396,7 @@ main {
         gap: 8px
     }
     .remove-btn-mobile {
+        display: block;
         padding: 0 0 10px 0;
     }
     .cart-product-info p{
@@ -414,7 +416,7 @@ main {
     .cart-item:last-child {
         border: none;
     }
-    .container {
+    .container-main {
         width: 100%;
         padding: 0 20px;
     }
@@ -448,18 +450,9 @@ main {
     .total-container p {
         margin: 20px 0;   
     }
-
 }
 
-@media (max-width: 640px) {
-    .cart-container {
-        padding: 3px;
-    }
 
-    .container {
-        padding: 0 10px;
-    }
-}
 
 
  

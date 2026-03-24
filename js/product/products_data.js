@@ -153,7 +153,7 @@ function loadProduct() {
         card.innerHTML = `
             <a href="product.html?id=${p.id}">
                 <div class="product-image">
-                    <img src="${p.img}" alt="product" style="height:270px">
+                    <img src="${p.img}" alt="product">
                 <div class="product-info" style="padding: 20px 20px 10px 15px">
                     <h3 style="margin: 10px 0">${p.name}</h3>
                     <div class="rating">
