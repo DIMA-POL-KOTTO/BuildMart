@@ -2,12 +2,12 @@ const emptyCart = document.querySelector(".cart-empty")
 const cartContent = document.querySelector(".cart-content")
 const cartItems = document.getElementById("cartItems")
 let cart = JSON.parse(localStorage.getItem("cart")) || []
-const cartCount = document.querySelector(".count-products") //
+const cartCount = document.querySelector(".count-products")
 let discountCoef = 0;
 if (cart.length === 0){
     emptyCart.style.display = "block";
     cartContent.style.display = "none";
-    cartCount.style.display = "none";//
+    cartCount.style.display = "none";
 }
 else {
     emptyCart.style.display = "none";
@@ -17,15 +17,14 @@ else {
 
 function showCartProducts(){
     let cart = JSON.parse(localStorage.getItem("cart")) || []
-    const totalCount = cart.reduce((sum, item) => sum + item.count, 0);//
-    if (totalCount > 0){//
-        cartCount.textContent = totalCount;//
-    }//
-
+    const totalCount = cart.reduce((sum, item) => sum + item.count, 0);
+    if (totalCount > 0){
+        cartCount.textContent = totalCount;
+    }
     if (cart.length === 0){
         emptyCart.style.display = "block";
         cartContent.style.display = "none";
-        cartCount.style.display = "none"; //
+        cartCount.style.display = "none"; 
         return;
     }
     cartItems.innerHTML = "";
@@ -63,24 +62,18 @@ function showCartProducts(){
             </div>
         </div>
         `;
-        
-        
     });
     updateSummary(subtotalCost)
 }
-
-
 
 function updateSummary(subtotal) {
     const tax = subtotal * 0.08;
     const discount = subtotal * discountCoef;
     const total = subtotal + tax - discount;
-    
     document.getElementById("subtotal").textContent = "$" + subtotal.toFixed(2);
     document.getElementById("tax").textContent = "$" + tax.toFixed(2);
     document.getElementById("total").textContent = "$" + total.toFixed(2);
     document.getElementById("discount").textContent = "-$" + discount.toFixed(2);
-
     const discountLine = document.querySelector(".discount-line");
     if (discountLine) {
         discountLine.style.display = discountCoef > 0 ? "flex" : "none";

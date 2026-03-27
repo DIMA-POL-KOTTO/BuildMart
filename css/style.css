@@ -31,7 +31,6 @@ button, option, select, input {
     align-items: center;
     height: 70px;
     gap: 25px;
-    
 }
 
 .logo {
@@ -83,7 +82,6 @@ nav a:hover {
     margin-right: 50px;
     position: relative;
     flex: 1;
-    
 }
 
 .search-bar input {
@@ -109,7 +107,6 @@ nav a:hover {
     top: 50%;
     transform: translateY(-50%);
     color: #cccccc;
-    
 }
 
 .search-icon-mobile {
@@ -196,7 +193,6 @@ nav a:hover {
 
 h1 {
     font-size: 36px;
-    
 }
 
 .products {
@@ -265,8 +261,6 @@ h1 {
     border: 2px solid #e75f10;
 }
 
-
-
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -323,8 +317,6 @@ h1 {
     font-size: 14px;
 }
 
-
-
 .rating span {
     color: #6b6a6a;
     font-size: 14px;
@@ -358,9 +350,6 @@ h1 {
 .add-to-cart:hover {
     background-color: #be470c;
 }
-
-
-
 
 footer {
     background: #111827;
@@ -441,7 +430,6 @@ footer .links a:hover {
 .newsletter-form input:focus {
     outline: none;
     border: 1px solid #e75f10;
-
 }
 
 .newsletter-form button {
@@ -599,7 +587,6 @@ footer .title {
 }
 
 .slider-container input::-webkit-slider-thumb:hover {
-    
     background: white;
     box-shadow: 0 0 0 6px #23232322;
 }
@@ -664,7 +651,6 @@ footer .title {
     opacity: 0;
     transform: translateY(-50px);
     box-shadow: 0 4px 12px #00000033;
-    
 }
 
 .toast.show {
@@ -705,7 +691,6 @@ footer .title {
     transform: scale(1);
 }
 
-
 .toast i {
     font-size: 16px;
     padding-right: 7px;
@@ -725,7 +710,6 @@ footer .title {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px
     }
-    
 }
 
 @media (max-width: 768px) {

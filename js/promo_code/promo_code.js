@@ -29,11 +29,9 @@ promoBtn.addEventListener("click", () => {
     if (promoInput.value === "BUILD10"){
         isApplied = true;        
         window.applyPromo();
-        
         promoHint.style.color = "green";
         promoHint.textContent = "✓ Promo code applied! You saved 10%";
         promoHint.style.display = "block";
-
     }
     else if (!isApplied) {
         promoHint.style.color = "red";

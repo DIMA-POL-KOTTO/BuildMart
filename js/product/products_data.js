@@ -127,7 +127,6 @@ const productsData = [
     }
 ];
 
-
 function loadProduct() {
     const id = new URLSearchParams(window.location.search).get("id");
     const product = productsData.find(p => p.id === id);
@@ -189,6 +188,5 @@ function renderStars (rating){
     for (let i=0; i < emptyStars; i++) {
         starsHtml += '<i class="fa-regular fa-star" style="color: #ccc;"></i>'
     }
-
     return starsHtml;
 }

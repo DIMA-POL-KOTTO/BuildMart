@@ -3,5 +3,4 @@ const accordion = document.querySelector(".accordion");
 
 accordionBtn.onclick = () => {
     accordion.classList.toggle("open");
-    
 }

@@ -21,10 +21,6 @@ main {
     gap: 40px;
 }
 
-.gallery {
-    
-}
-
 .main-image {
     position: relative;
     aspect-ratio: 1/1;
@@ -314,6 +310,6 @@ main {
         grid-template-columns: repeat(2, 1fr) !important;
     }
     .specs {
-        grid-template-columns: 1fr; /*ddd*/
+        grid-template-columns: 1fr;
     }
 }

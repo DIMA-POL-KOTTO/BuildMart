@@ -7,13 +7,11 @@ const clearBtn2 = document.getElementById("clearBtn2");
 const productsCount = document.querySelector('.products-count');
 
 function filterProducts(){
-
     const min = parseInt(minSlider.value);
     const max = parseInt(maxSlider.value);
     const checked = document.querySelector('.rating-option input:checked');
     const rating = checked ? parseFloat(checked.value) : null;
     let count = 0;
-
     products.forEach(product => {
         const price = parseFloat(product.dataset.price);
         const productRating = parseFloat(product.dataset.rating);

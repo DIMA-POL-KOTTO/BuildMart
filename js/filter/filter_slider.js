@@ -12,19 +12,17 @@ function updateSlider(){
     if (max < min + 10){
         min = min-10;
     }
-    
     minSlider.value = min;
     maxSlider.value = max;
-
     minValue.textContent = "$" + min;
     maxValue.textContent = "$" + max;
     const percentMin = (min/(maxPrice+5)) * 100;
     const percentMax = (max/(maxPrice+10)) * 100;
     range.style.left = percentMin + "%";
     range.style.width = (percentMax - percentMin+2.5) + "%";
-
     filterProducts();
 }
+
 minSlider.addEventListener("input", updateSlider)
 maxSlider.addEventListener("input", updateSlider)
 updateSlider();

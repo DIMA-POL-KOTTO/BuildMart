@@ -51,7 +51,6 @@ buttons.forEach(button => {
             showToast(`Added ${card.dataset.name} to cart`);
         }
     });
-    
 });
 
 function updateCartCounter() {
@@ -115,7 +114,6 @@ function updatePos(){
             toast.setAttribute('data-position', index);
         }
     })
-
 }
 
 document.addEventListener('DOMContentLoaded', updateCartCounter);
