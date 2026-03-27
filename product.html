@@ -111,12 +111,16 @@
                         <p style="font-weight: 600; font-size: 14px;">Quantity</p>
                         <div class="quan-box">
                             <button id="minus">-</button>
-                            <input id="quan" type="number" value="1" min="1" style="appearance: none; -webkit-appearance: none">
+                            <input id="quan" type="number" value="1" min="1">
                             <button id="plus">+</button>
                         </div>
                         
                     </div>
-                    <button class="add-to-cart" style="height: 55px; font-size: 16px;"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    <div class="add-delete-btns">
+                        <button class="add-to-cart" style="height: 55px; font-size: 16px;"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                        <button id="deleteBtnSecondary" onclick="deleteProduct(this.dataset.id)"><i class="fa-solid fa-trash"></i><p id="productId" style="display: none;"></p></button>
+                    </div>
+                    
                     <button class="buy-now-btn">Buy Now</button>
                     <div class="description">
                         <h2>Description</h2>
@@ -229,9 +233,12 @@
 
         </div>
     </footer>
+<script src="js/product/delete_btn.js"></script>
 <script src="js/cart/add_to_cart.js"></script>
 <script src="js/product/products_data.js"></script>
 <script src="js/product/quantity_UI.js"></script>
 <script src="js/product/switch_photo.js"></script>
 <script src="js/product/accordion.js"></script>
+<script src="js/cart/delete_product.js"></script>
+
 </body>

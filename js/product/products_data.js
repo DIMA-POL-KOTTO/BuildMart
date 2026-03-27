@@ -131,6 +131,7 @@ const productsData = [
 function loadProduct() {
     const id = new URLSearchParams(window.location.search).get("id");
     const product = productsData.find(p => p.id === id);
+    const deleteBtnSecondary = document.getElementById("deleteBtnSecondary");
     if (!product) return;
     document.getElementById("productImg").src = product.img;
     document.getElementById("productImg1").src = product.img;
@@ -141,6 +142,9 @@ function loadProduct() {
     document.getElementById("productPrice").textContent = "$" + product.price;
     document.getElementById("productDescription").textContent = product.description;
     document.getElementById("productCategory").textContent = product.category;
+    if (deleteBtnSecondary){
+        deleteBtnSecondary.dataset.id = id;
+    }
     for (let i=1; i <= 6; i++) {
         document.getElementById(`spec_t${i}`).textContent = product[`spec_t${i}`];
         document.getElementById(`spec_d${i}`).textContent = product[`spec_d${i}`];
@@ -169,6 +173,7 @@ function loadProduct() {
 }
 
 loadProduct();
+showDeleteBtn();
 
 function renderStars (rating){
     let starsHtml = '';

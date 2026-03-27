@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const nameA = a.dataset.name.toLowerCase();
                     const nameB = b.dataset.name.toLowerCase();
                     return nameA.localeCompare(nameB);
+                case 'name-za':
+                    return b.dataset.name.toLowerCase().localeCompare(a.dataset.name.toLowerCase());
                 case 'price-low':
                     return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
                 case 'price-high':

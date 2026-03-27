@@ -45,9 +45,9 @@ buttons.forEach(button => {
         updateCartCounter();
         if (!card) {
             showToast(`Added ${quantity} ${productName.textContent} to cart`);
+            showDeleteBtn();
         }
         else {
-            console.log(card);
             showToast(`Added ${card.dataset.name} to cart`);
         }
     });
