@@ -73,12 +73,13 @@ function showCartProducts(){
 
 function updateSummary(subtotal) {
     const tax = subtotal * 0.08;
-    const total = subtotal + tax - discountCoef;
+    const discount = subtotal * discountCoef;
+    const total = subtotal + tax - discount;
     
     document.getElementById("subtotal").textContent = "$" + subtotal.toFixed(2);
     document.getElementById("tax").textContent = "$" + tax.toFixed(2);
     document.getElementById("total").textContent = "$" + total.toFixed(2);
-    document.getElementById("discount").textContent = "-$" + discountCoef.toFixed(2);
+    document.getElementById("discount").textContent = "-$" + discount.toFixed(2);
 
     const discountLine = document.querySelector(".discount-line");
     if (discountLine) {
@@ -86,8 +87,8 @@ function updateSummary(subtotal) {
     }
 }
 
-window.applyPromo = function(coef) {
-    discountCoef = coef;
+window.applyPromo = function() {
+    discountCoef = 0.1;
     const subtotal = parseFloat(document.getElementById("subtotal").textContent.replace(/[^0-9.]/g, ''));
     updateSummary(subtotal);
 }

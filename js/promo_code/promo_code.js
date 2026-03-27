@@ -25,12 +25,8 @@ const discountLine = document.querySelector(".discount-line")
 
 promoBtn.addEventListener("click", () => {
     if (promoInput.value === "BUILD10"){
-        isApplied = true;
-
-        const subtotal = parseFloat(document.getElementById("subtotal").textContent.replace(/[^0-9.]/g, ''));
-        const discount = subtotal * 0.1;
-        
-        window.applyPromo(discount);
+        isApplied = true;        
+        window.applyPromo();
         
         promoHint.style.color = "green";
         promoHint.textContent = "✓ Promo code applied! You saved 10%";
