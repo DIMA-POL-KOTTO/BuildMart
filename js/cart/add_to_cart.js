@@ -76,6 +76,9 @@ function showToast(mes){
     toast.innerHTML = `
         <p><i class="fa-solid fa-circle-check"></i> ${mes}</p>
     `;
+    toast.addEventListener("click", () => {
+        window.location.href = "cart.html";
+    })
     container.appendChild(toast);
     toastQueue.unshift(toast);
     if(toastQueue.length > MAX_TOASTS){

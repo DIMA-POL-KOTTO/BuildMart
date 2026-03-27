@@ -283,6 +283,25 @@ main {
     -webkit-appearance: none;
 }
 
+.add-delete-btns {
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+#deleteBtnSecondary {
+    border: 2px solid rgb(229, 0, 0);
+    border-radius: 9px;
+    width: 60px;
+    background-color: white;
+    color: rgb(229, 0, 0);
+    font-size: 16px;
+}
+
+#deleteBtnSecondary:hover {
+    background-color: #6b6a6a20;
+    transition: 0.2s;
+}
 
 @media (max-width: 1024px) {
     .product {
