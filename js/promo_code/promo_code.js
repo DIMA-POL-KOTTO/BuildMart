@@ -6,6 +6,8 @@ promoInput.addEventListener("input", () => {
     if (!isApplied){
         if (promoInput.value){
             promoHint.style.display = "block";
+            promoHint.style.color = "#6b6a6a";
+            promoHint.textContent = "Try code: BUILD10 for 10% off";
         }
         else {
             promoHint.style.display = "none";
@@ -23,6 +25,7 @@ const promoBtn = document.getElementById("promoBtn")
 const discountLine = document.querySelector(".discount-line")
 
 promoBtn.addEventListener("click", () => {
+    if (promoInput.value.length === 0) return;
     if (promoInput.value === "BUILD10"){
         isApplied = true;        
         window.applyPromo();
@@ -38,4 +41,3 @@ promoBtn.addEventListener("click", () => {
         promoHint.style.display = "block";
     }
 })
-
