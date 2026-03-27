@@ -47,7 +47,8 @@ buttons.forEach(button => {
             showToast(`Added ${quantity} ${productName.textContent} to cart`);
         }
         else {
-            showToast(`Added ${card.dataset.productName} to cart`);
+            console.log(card);
+            showToast(`Added ${card.dataset.name} to cart`);
         }
     });
     

@@ -22,7 +22,7 @@ main {
 }
 
 .gallery {
-    max-width: 570px;
+    
 }
 
 .main-image {
@@ -101,8 +101,8 @@ main {
 }
 
 .features {
-    display: flex;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     border-bottom: 1px solid #cccccc6e;
     margin: 20px 0;
     padding-bottom: 20px;
@@ -110,6 +110,7 @@ main {
 
 .feature {
     display: flex;
+    flex-wrap: nowrap;
     gap: 10px;
     align-items: center;
     font-size: 14px;
@@ -240,7 +241,7 @@ main {
 }
 
 .accordion.open .accordion-content {
-    max-height: 300px;
+    max-height: 800px;
 }
 
 .specs {
@@ -278,6 +279,19 @@ main {
     text-overflow: ellipsis;
 }
 
-@media (max-width: 1024px) {
 
+
+@media (max-width: 1024px) {
+    .product {
+        grid-template-columns: 1fr;
+    }   
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .specs {
+        grid-template-columns: 1fr; /*ddd*/
+    }
 }
