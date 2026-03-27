@@ -22,7 +22,6 @@ promoInput.addEventListener("input", () => {
 const promoBtn = document.getElementById("promoBtn")
 const discountLine = document.querySelector(".discount-line")
 
-
 promoBtn.addEventListener("click", () => {
     if (promoInput.value === "BUILD10"){
         isApplied = true;        
@@ -30,6 +29,12 @@ promoBtn.addEventListener("click", () => {
         
         promoHint.style.color = "green";
         promoHint.textContent = "✓ Promo code applied! You saved 10%";
+        promoHint.style.display = "block";
+
+    }
+    else if (!isApplied) {
+        promoHint.style.color = "red";
+        promoHint.textContent = "X Promo code is incorrect!";
         promoHint.style.display = "block";
     }
 })
